@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+##At first download and install NodeJS and, set your "C:\Program Files\nodejs\;" to your Environment Variables.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

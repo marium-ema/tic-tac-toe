@@ -23,8 +23,10 @@ export class Play extends Component{
         let aiMoveObj = minMaxAlgo(this.state.boardStatus, this.state.aiPlayer);
         let curBoard = this.state.boardStatus;
         curBoard[aiMoveObj.index]=this.state.aiPlayer;
-        this.setState({boardStatus:curBoard});
-        this.setState({stepNumber:this.state.stepNumber+1});
+        this.setState({
+            boardStatus:curBoard, 
+            stepNumber:this.state.stepNumber+1
+        });
     }
 
     handleClick(button){
@@ -43,9 +45,11 @@ export class Play extends Component{
         }
         let curBoard = this.state.boardStatus;
         curBoard[index]=this.state.huPlayer;
-        this.setState({boardStatus:curBoard});
-        this.setState({stepNumber:this.state.stepNumber+1});
-
+        this.setState({
+            boardStatus:curBoard,
+            stepNumber:this.state.stepNumber+1
+        });
+      
         // AI move after 1 second
         setTimeout(
             () => this.aiMoveTrigger(), 
@@ -55,8 +59,10 @@ export class Play extends Component{
 
     newGame(){
         let resetBoard = new Array(9).fill(null);
-        this.setState({boardStatus:resetBoard});
-        this.setState({stepNumber:0});
+        this.setState({
+            boardStatus:resetBoard,
+            stepNumber:0
+        });
     }
 
     render(){
